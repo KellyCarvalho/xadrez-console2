@@ -23,7 +23,16 @@ public class Board {
 		this.columns = columns;
 	}
 	
+	
+//Retorna as peças do tabuleiro em relação a linha e coluna informada
+public Piece piece(int row,int column) {
+	return pieces[row][column];
+}
 
+//Retorna as peças do tabuleiro em relação a posição já completa
+public Piece piece(Position position) {
+	return pieces[position.getRow()][position.getColumn()];
+}
 
 	
 
