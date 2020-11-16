@@ -1,9 +1,7 @@
 package chess;
 
 import BoardGame.Board;
-import BoardGame.Position;
 import chess.piece.King;
-import chess.piece.Rook;
 
 public class ChessMatch {
 	
@@ -29,12 +27,18 @@ public class ChessMatch {
 		return mat;
 	}
 	
+	//atribuindo lugar a nova peça usando o sistema de localização do xadrez
+	private void placeNewPiece(char column, int row,ChessPiece piece) {
+		//Irá receber uma peça numa posição no formato matriz xadrez e irá converter para matriz regular
+		board.placePiece(piece, new ChessPosition(column, row).toPosition());
+	}
+	
 	
 	//A forma com que as peças estarão dispostas no tabuleiro
 	
 	private void initialSetup() {
-		board.placePiece(new King(board, Color.WHITE), new Position(2,2));
-		board.placePiece(new King(board, Color.WHITE), new Position(2,1));
+		placeNewPiece('a',1, new King(board, Color.WHITE));
+
 	}
 
 
