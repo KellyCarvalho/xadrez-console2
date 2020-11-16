@@ -22,7 +22,7 @@ public class UI {
 			System.out.println();
 		}
 		//irá imprimir a parte de baixo do tabuleiro
-		System.out.println("  a b c d f g h");
+		System.out.println("  a b c d e f g h");
 		
 	}
 	//Imprimindo peças no console
@@ -30,7 +30,11 @@ public class UI {
 		
 		if(piece==null) {
 			System.out.print("-");
+		}else {
+			System.out.print(piece);
 		}
+			
+		
 		
 		System.out.print(" ");
 	}

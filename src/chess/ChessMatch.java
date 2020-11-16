@@ -1,6 +1,9 @@
 package chess;
 
 import BoardGame.Board;
+import BoardGame.Position;
+import chess.piece.King;
+import chess.piece.Rook;
 
 public class ChessMatch {
 	
@@ -8,6 +11,7 @@ public class ChessMatch {
 	
 	public ChessMatch() {
 		board = new Board(8,8);
+		initialSetup();
 	}
 	
 	/*Converte a classe peças em Peças em xadrez, para não ser possível uma atuação 
@@ -26,5 +30,12 @@ public class ChessMatch {
 	}
 	
 	
+	//A forma com que as peças estarão dispostas no tabuleiro
+	
+	private void initialSetup() {
+		board.placePiece(new King(board, Color.WHITE), new Position(2,2));
+		board.placePiece(new King(board, Color.WHITE), new Position(2,1));
+	}
+
 
 }
