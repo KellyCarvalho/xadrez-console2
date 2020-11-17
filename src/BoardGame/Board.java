@@ -76,6 +76,26 @@ public Piece piece(Position position) {
 		piece.position=position;
 	}
 	
+	//remover peça 
+	public Piece removePiece(Position position) {
+		if(!positionExists(position)) {
+			
+			throw new BoardException("Posição: "+position+" não existe");
+		}
+		//testando se existe uma peça na posição
+		if(piece(position)==null) {
+			return null;
+		}
+		
+		Piece aux = piece(position);
+		aux.position=null;
+		
+		pieces[position.getRow()][position.getColumn()]=null;
+		return aux;
+		
+	}
+	
+	
 	//verificando se a posição existe
 	private boolean positionExists(int row,int column) {
 		

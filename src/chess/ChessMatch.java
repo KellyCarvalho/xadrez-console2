@@ -1,6 +1,8 @@
 package chess;
 
 import BoardGame.Board;
+import BoardGame.Piece;
+import BoardGame.Position;
 import chess.piece.King;
 
 public class ChessMatch {
@@ -27,6 +29,36 @@ public class ChessMatch {
 		return mat;
 	}
 	
+	//irá usar o método de conversão com as posições recebidas
+	public ChessPiece performChessMove(ChessPosition sourcePosition, ChessPosition targetPosition) {
+		Position source = sourcePosition.toPosition();
+		Position target = targetPosition.toPosition();
+		validateSourcePosition(source);
+		Piece capturedPiece = makeMove(source,target);
+		
+		return (ChessPiece) capturedPiece;
+	}
+	
+	private Piece makeMove(Position source, Position target) {
+		//primeiro remove as peças da origem e destino
+		Piece p = board.removePiece(source);
+		//remove a peça que está na posição de destino
+		Piece capturedPiece=board.removePiece(target);
+		//adiciona a peça da posição de origem para posição de destino
+		board.placePiece(p, target);
+		return capturedPiece;
+		
+	}
+	
+	//validando a posição de origem
+	public void validateSourcePosition(Position position) {
+		
+	if(!board.thereIsAPiece(position)) {
+		throw new ChessException("Não existe peça na posição de origem: "+position);
+		
+	}	
+	}
+	
 	//atribuindo lugar a nova peça usando o sistema de localização do xadrez
 	private void placeNewPiece(char column, int row,ChessPiece piece) {
 		//Irá receber uma peça numa posição no formato matriz xadrez e irá converter para matriz regular
@@ -38,7 +70,10 @@ public class ChessMatch {
 	
 	private void initialSetup() {
 		placeNewPiece('a',1, new King(board, Color.WHITE));
-
+		placeNewPiece('b',1, new King(board, Color.WHITE));
+		placeNewPiece('c',1, new King(board, Color.BLACK));
+		placeNewPiece('d',1, new King(board, Color.BLACK));
+		placeNewPiece('e',1, new King(board, Color.WHITE));
 	}
 
 
