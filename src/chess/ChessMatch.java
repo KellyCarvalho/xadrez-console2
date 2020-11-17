@@ -57,6 +57,10 @@ public class ChessMatch {
 		throw new ChessException("Não existe peça na posição de origem: "+position);
 		
 	}	
+	
+	if(!board.piece(position).isThereAnypossibleMove()) {
+		throw new ChessException("Não existe movimentos possiveis para a peca");
+	}
 	}
 	
 	//atribuindo lugar a nova peça usando o sistema de localização do xadrez
