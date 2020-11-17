@@ -4,6 +4,7 @@ import BoardGame.Board;
 import BoardGame.Piece;
 import BoardGame.Position;
 import chess.piece.King;
+import chess.piece.Rook;
 
 public class ChessMatch {
 	
@@ -34,6 +35,7 @@ public class ChessMatch {
 		Position source = sourcePosition.toPosition();
 		Position target = targetPosition.toPosition();
 		validateSourcePosition(source);
+		validadeTargetPosition(source, target);
 		Piece capturedPiece = makeMove(source,target);
 		
 		return (ChessPiece) capturedPiece;
@@ -63,6 +65,19 @@ public class ChessMatch {
 	}
 	}
 	
+	//validando a posição de destino
+	
+	private void validadeTargetPosition(Position source, Position target) {
+		
+		if(!board.piece(source).possibleMove(target)) {
+			throw new ChessException("Movimento Invalido");
+		}
+		
+		
+	}
+	
+   
+	
 	//atribuindo lugar a nova peça usando o sistema de localização do xadrez
 	private void placeNewPiece(char column, int row,ChessPiece piece) {
 		//Irá receber uma peça numa posição no formato matriz xadrez e irá converter para matriz regular
@@ -73,11 +88,11 @@ public class ChessMatch {
 	//A forma com que as peças estarão dispostas no tabuleiro
 	
 	private void initialSetup() {
-		placeNewPiece('a',1, new King(board, Color.WHITE));
-		placeNewPiece('b',1, new King(board, Color.WHITE));
-		placeNewPiece('c',1, new King(board, Color.BLACK));
-		placeNewPiece('d',1, new King(board, Color.BLACK));
-		placeNewPiece('e',1, new King(board, Color.WHITE));
+		placeNewPiece('a',1, new Rook(board, Color.WHITE));
+		placeNewPiece('b',1, new Rook(board, Color.WHITE));
+		placeNewPiece('c',1, new Rook(board, Color.BLACK));
+		placeNewPiece('d',1, new Rook(board, Color.BLACK));
+		placeNewPiece('e',1, new Rook(board, Color.WHITE));
 	}
 
 
