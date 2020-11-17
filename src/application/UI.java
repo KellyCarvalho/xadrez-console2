@@ -63,7 +63,7 @@ public class UI {
 			for(int j=0;j<pieces.length;j++) {
 				
 				//chama o método que vai imprimir no console todo o tabuleiro
-				printPiece(pieces[i][j]);
+				printPiece(pieces[i][j],false);
 				
 				
 			}
@@ -75,10 +75,39 @@ public class UI {
 		System.out.println("  a b c d e f g h");
 		
 	}
+	
+	//imprimindo movimentos possiveis
+	
+	//imprimindo tabuleiro
+	public static void printBoard(ChessPiece[][] pieces,boolean[][] possibleMoves) {
+		
+		for(int i=0;i<pieces.length;i++) {
+			//Irá imprimir o número das linhas do tabuleiro
+			System.out.print((8-i)+" ");
+			for(int j=0;j<pieces.length;j++) {
+				
+				//chama o método que vai imprimir no console todo o tabuleiro
+				printPiece(pieces[i][j],possibleMoves[i][j]);
+				
+				
+			}
+			
+			
+			System.out.println();
+		}
+		//irá imprimir a parte de baixo do tabuleiro
+		System.out.println("  a b c d e f g h");
+		
+	}
+	
 	//Imprimindo peças no console
 	
 	
-	private static void printPiece(ChessPiece piece) {
+	private static void printPiece(ChessPiece piece,boolean background) {
+		
+		if(background==true) {
+			System.out.print(ANSI_CYAN_BACKGROUND);
+		}
 		
 		if (piece == null) {
             System.out.print("-" + ANSI_RESET);

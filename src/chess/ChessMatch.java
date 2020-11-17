@@ -30,6 +30,15 @@ public class ChessMatch {
 		return mat;
 	}
 	
+	
+	public boolean[][] possibleMoves(ChessPosition sourcePosition){
+		
+		Position position = sourcePosition.toPosition();
+		validateSourcePosition(position);
+		return board.piece(position).possibleMoves();
+		
+	}
+	
 	//irá usar o método de conversão com as posições recebidas
 	public ChessPiece performChessMove(ChessPosition sourcePosition, ChessPosition targetPosition) {
 		Position source = sourcePosition.toPosition();
@@ -71,6 +80,8 @@ public class ChessMatch {
 		
 		if(!board.piece(source).possibleMove(target)) {
 			throw new ChessException("Movimento Invalido");
+			
+			
 		}
 		
 		
