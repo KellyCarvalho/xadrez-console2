@@ -1,4 +1,4 @@
-# xadrez-console2
+# XADREZ-CONSOLE
 Este é um projeto acadêmico desenvolvido com a ajuda do professor Nélio Alves. É um jogo de xadrez via console. Para executar ele você precisa do jdk instalado, 
 git bash de preferência como emulador de terminal.
 Você pode jogar com seu amigo ou contra si mesmo, fique a vontade para testar.
