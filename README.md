@@ -3,6 +3,6 @@ Este é um projeto acadêmico desenvolvido com a ajuda do professor Nélio Alves
 git bash de preferência como emulador de terminal.
 Você pode jogar com seu amigo ou contra si mesmo, fique a vontade para testar.
  Este projeto foi um dos mais desafiadores até agora, nele colocamos em check como a orientação a objetos facilita no desenvolvimento. 
- Usei alguns  recusos  de terminal como cores, que não funcionaram se o seu console
+ Usei alguns  recusos  de terminal como cores, que não funcionarão se o seu console
  não tiver o recurso ANSI colors não vai ficar bonito, então rode a aplicação no git bash de preferência.
   
