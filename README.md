@@ -1,5 +1,5 @@
 # XADREZ-CONSOLE
-Este é um projeto acadêmico desenvolvido com a ajuda do professor Nélio Alves. É um jogo de xadrez via console. Para executar ele você precisa do jdk instalado, 
+Este é um projeto foi desenvolvido para testar meus conhecimentos em POO e tratamento de exceções. É um jogo de xadrez via console. Para executar ele você precisa do jdk instalado, 
 git bash de preferência como emulador de terminal.
 Você pode jogar com seu amigo ou contra si mesmo, fique a vontade para testar.
  Este projeto foi um dos mais desafiadores até agora, nele colocamos em check como a orientação a objetos facilita no desenvolvimento. 
