@@ -8,8 +8,8 @@ Rápida descrição do objetivo de fazer esse projeto
 
 | :placard: Vitrine.Dev |     |
 | -------------  | --- |
-| :sparkles: Nome        | **Titulo do meu projeto**
-| :label: Tecnologias | java (tecnologias utilizadas)
+| :sparkles: Nome        | **Xadrex console**
+| :label: Tecnologias | java 
 | :rocket: URL         | não tem
 | :fire: Desafio     | também não tem
 
