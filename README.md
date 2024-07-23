@@ -10,8 +10,6 @@ Rápida descrição do objetivo de fazer esse projeto
 | -------------  | --- |
 | :sparkles: Nome        | **Xadrex console**
 | :label: Tecnologias | java 
-| :rocket: URL         | não tem
-| :fire: Desafio     | também não tem
 
 <!-- Inserir imagem com a #vitrinedev ao final do link -->
 ![](https://plus.diolinux.com.br/uploads/default/original/3X/5/7/57ffeed1f1421936f5cb4ddba651063db7f68d70.png?text=imagem+lindona+do+meu+projeto#vitrinedev)
